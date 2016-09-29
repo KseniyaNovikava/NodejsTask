@@ -1,0 +1,19 @@
+{
+  "name": "httpserver",
+  "version": "1.0.0",
+  "description": "NodejsTask",
+  "main": "httpServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ksushenka/NodejsTask.git"
+  },
+  "author": "Kseniya Novikava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ksushenka/NodejsTask/issues"
+  },
+  "homepage": "https://github.com/Ksushenka/NodejsTask#readme"
+}

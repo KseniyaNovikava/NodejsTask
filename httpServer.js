@@ -26,8 +26,8 @@ http.createServer(function(req, res){
       '</head>'+
       '<body>'+
       '<ul>'+
-      '<li>View <a href="./logo.png">logo.png</a>.</li>' +
-      '<li>View <a href="./video.mp4">video.mp4</a>.</li>' +
+      '<li>View <a href="/files/logo.png">logo.png</a>.</li>' +
+       '<li>View <a href="/files/text.txt">text.txt</a>.</li>' +
       '</ul>'+
       '</body>'+
       '</html>';
@@ -37,11 +37,10 @@ http.createServer(function(req, res){
     }
     else{
 
-      var pathName = url.parse(req.url).pathname;
-      var file = new fs.ReadStream(pathName);
+     
+      var file = new fs.ReadStream(fullFilePath);
       sendFile(file,res);
     }
-    console.log(pathName);
 
 });
 
@@ -49,6 +48,7 @@ http.createServer(function(req, res){
 }).listen(8080);
 
     function sendFile(file,res){
+
       file.pipe(res);
 
       file.on('error',function(err){
